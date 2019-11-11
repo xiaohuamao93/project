@@ -1,6 +1,8 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <p>username: {{msg2.username}}</p>
+    <p>password: {{msg2.password}}</p>
   </div>
 </template>
 
@@ -13,12 +15,13 @@ export default {
   },
   data() {
       return {
-
+        msg2: ''
       }
   },
   created() {
     this.axios.get(host + '/users')
             .then(res => {
+              this.msg2 = res.data;
               console.log('--res', res);
             })
             .catch(err => {
