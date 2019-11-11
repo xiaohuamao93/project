@@ -15,7 +15,7 @@ export default {
   },
   data() {
       return {
-        msg2: ''
+        msg2: '3'
       }
   },
   created() {
