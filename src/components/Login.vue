@@ -37,8 +37,12 @@ export default {
                     message: '登录成功',
                     iconClass: 'icon icon-success'
                   });
-                  this.$router.push('/home');
+                  return this.$router.push('/home');
                 }
+                Toast({
+                  message: '登录失败',
+                  iconClass: 'icon icon-error'
+                });
               })
               .catch(err => {
                 console.log('---err', err);
