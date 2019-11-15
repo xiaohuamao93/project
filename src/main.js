@@ -10,6 +10,8 @@ import host from '../utils/address';
 
 Vue.config.productionTip = false
 
+import async from 'async';
+Vue.prototype.$async = async;
 
 import './stylesheets/reset.styl';
 
