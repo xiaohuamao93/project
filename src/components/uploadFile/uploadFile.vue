@@ -80,7 +80,7 @@
                     let {file, index} = mat;
                     let param = new FormData();
                     param.append('file', file, file.name);
-                    param.append('uploader', this.user.username);
+                    param.append('uploader', this.user._id);
                     let progress = 0;
                     let config = {
                         headers: {
