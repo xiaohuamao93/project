@@ -81,6 +81,7 @@
                     let param = new FormData();
                     param.append('file', file, file.name);
                     param.append('uploader', this.user._id);
+                    param.append('source', "test");
                     let progress = 0;
                     let config = {
                         headers: {

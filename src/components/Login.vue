@@ -1,7 +1,19 @@
 <template>
   <div class="login-wrap">
-    <mt-field label="用户名" placeholder="请输入用户名" v-model="username"></mt-field>
-    <mt-field label="密码" placeholder="请输入密码" type="password" v-model="password"></mt-field>
+    <div class="input-wrap">
+      <div class="input-item bor-bottom">
+        <span class="user-icon"></span>
+        <mt-field placeholder="请输入用户名" v-model="username"></mt-field>
+      </div>
+      <div class="input-item">
+        <span class="pass-icon"></span>
+        <mt-field placeholder="请输入密码" type="password" v-model="password"></mt-field>
+      </div>
+      <div class="btn-txt-wrap">
+        <a href="">注册账户</a>
+        <a class="red-txt">忘记密码</a>
+      </div>
+    </div>
     <mt-button type="primary" size="large" @click.native.enter="handleClick">登录</mt-button>
   </div>
 </template>
@@ -55,7 +67,44 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   .login-wrap {
-    margin-top: 1rem;
+    padding: 2rem .3rem 0;
+  }
+  /*.bor-bottom {*/
+  /*  border-bottom: 1px solid #bbb;*/
+  /*}*/
+  .input-wrap {
+    margin-bottom: .5rem;
+  }
+  .input-item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #bbb;
+  }
+  .user-icon {
+    width: .24rem;
+    height: .24rem;
+    margin-right: .1rem;
+    background: url("../assets/user_name.png") no-repeat;
+    background-size: contain;
+  }
+  .pass-icon {
+    width: .24rem;
+    height: .24rem;
+    margin-right: .1rem;
+    background: url("../assets/password.png") no-repeat;
+    background-size: contain;
+  }
+  .btn-txt-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    line-height: .4rem;
+  }
+  .btn-txt-wrap span {
+    text-decoration: underline;
+  }
+  .red-txt {
+    color: red;
   }
 h3 {
   margin: 40px 0 0;
