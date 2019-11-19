@@ -20,7 +20,7 @@
                 <upload-file></upload-file>
             </mt-tab-container-item>
             <mt-tab-container-item id="record">
-                记录页面
+                <picture-vue></picture-vue>
             </mt-tab-container-item>
 
             <mt-tab-container-item id="my">
@@ -34,9 +34,10 @@
 <script>
     import uploadFile from '../uploadFile/uploadFile.vue';
     import mineVue from '../mine/mine.vue';
+    import pictureVue from '../picture';
     export default {
         name: "Home",
-        components: {uploadFile, mineVue},
+        components: {uploadFile, mineVue, pictureVue},
         data() {
             return {
                 selected: 'home'

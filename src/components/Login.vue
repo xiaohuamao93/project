@@ -10,8 +10,8 @@
         <mt-field placeholder="请输入密码" type="password" v-model="password"></mt-field>
       </div>
       <div class="btn-txt-wrap">
-        <a href="">注册账户</a>
-        <a class="red-txt">忘记密码</a>
+        <a class="txt" href="">注册账户</a>
+        <a class="red-txt txt">忘记密码</a>
       </div>
     </div>
     <mt-button type="primary" size="large" @click.native.enter="handleClick">登录</mt-button>
@@ -100,10 +100,11 @@ export default {
     justify-content: space-between;
     line-height: .4rem;
   }
-  .btn-txt-wrap span {
-    text-decoration: underline;
+  .btn-txt-wrap .txt {
+    text-decoration: underline !important;
+    color: #666;
   }
-  .red-txt {
+  .btn-txt-wrap .red-txt {
     color: red;
   }
 h3 {

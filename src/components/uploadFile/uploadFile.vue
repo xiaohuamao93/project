@@ -24,6 +24,7 @@
         data() {
             return {
                 uploadMats: [],
+
                 showProgress: false
             }
         },
@@ -75,7 +76,7 @@
                 if (mats.length === 0) return Toast('请选择需要上传的视频或图片');
                 // let loadingMasks = [];
                 this.showProgress = true;
-                const url = this.$host + '/api/upload';
+                const url = this.$host + '/picture/upload';
                 this.$async.each(mats, (mat, callback) => {
                     let {file, index} = mat;
                     let param = new FormData();
