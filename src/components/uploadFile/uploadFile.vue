@@ -1,6 +1,6 @@
 <template>
     <div>
-        <input class="not-show" ref="upload" type="file" @change="attachFile" name="file" accept="image/*" multiple="multiple" />
+        <input class="not-show" ref="upload" type="file" @change="attachFile" name="file" accept="image/*" capture="camera" />
         <div class="img-list-wrap">
             <ul class="img-list">
                 <li class="img-item el-upload--picture-card" @click="selectedMats">
