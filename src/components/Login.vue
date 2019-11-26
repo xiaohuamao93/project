@@ -13,6 +13,7 @@
         <a class="txt" href="">注册账户</a>
         <a class="red-txt txt">忘记密码</a>
       </div>
+      <span class="test">{{code}}</span>
     </div>
     <mt-button type="primary" size="large" @click.native.enter="handleClick">登录</mt-button>
   </div>
@@ -28,11 +29,20 @@ export default {
   data() {
       return {
         username: '',
-        password: ''
+        password: '',
+        code: ''
       }
   },
   created() {
 
+  },
+  mounted() {
+    const that = this;
+    document.onkeyup = function (e) {
+      var code = e.charCode || e.keyCode;
+      console.log('----code', code);
+      that.code = code;
+    }
   },
   methods: {
     handleClick() {
