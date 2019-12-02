@@ -18,7 +18,7 @@ import './stylesheets/reset.styl';
 import util from './common/util';
 Vue.prototype.$util = util;
 // Vue.prototype.$host = host;
-Vue.prototype.$host = '/proxy';
+Vue.prototype.$host = 'proxy';
 
 
 Vue.use(VueAxios, axios)
