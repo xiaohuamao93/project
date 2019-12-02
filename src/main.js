@@ -6,7 +6,7 @@ import './common/mobileRem';
 import router from './router/index';
 import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
-import host from '../utils/address';
+// import host from '../utils/address';
 
 Vue.config.productionTip = false
 
