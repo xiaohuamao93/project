@@ -72,7 +72,13 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style>
+  .mint-cell:last-child {
+    background: none;
+  }
+  .mint-cell-wrapper {
+    background-image: none !important;
+  }
   .login-wrap {
     padding: 2rem .3rem 0;
   }
