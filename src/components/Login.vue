@@ -7,7 +7,7 @@
       </div>
       <div class="input-item">
         <span class="pass-icon"></span>
-        <mt-field placeholder="请输入密码" type="password" v-model="password"></mt-field>
+        <mt-field placeholder="请输入密码" type="password" v-model="password" @keyup="keyupSearch"></mt-field>
       </div>
       <div class="btn-txt-wrap">
         <a class="txt" href="">注册账户</a>
@@ -32,16 +32,30 @@ export default {
       }
   },
   created() {
-
-  },
-  mounted() {
-    const that = this;
-    document.onkeyup = function (e) {
-      var code = e.charCode || e.keyCode;
-      if (code === 13) that.handleClick();
+    let user = this.$util.session.get('user');
+    if (user && user._id) {
+      return this.$router.push('/home');
+    } else {
+      this.axios.get(this.$host + '/api/user')
+          .then(res => {
+            let result = res.data;
+            if (result.code === 0 && result.data.user) {
+              return this.$router.push('/home');
+            }
+          })
+          .catch(() => {
+            Toast({
+              message: '自动登录失效',
+              iconClass: 'icon icon-error'
+            });
+          })
     }
   },
   methods: {
+    keyupSearch: function (evt) {
+      var code = evt.keyCode || evt.charCode;
+      if (code === 13) this.handleClick();
+    },
     handleClick() {
       let {username, password} = this;
       let user = {
