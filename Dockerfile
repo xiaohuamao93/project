@@ -25,7 +25,7 @@ ADD package.json /code
 
 RUN npm install --production
 
-RUN . /code
+ADD . /code
 
 RUN npm run build
 
