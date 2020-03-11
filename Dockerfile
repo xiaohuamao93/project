@@ -33,4 +33,4 @@ RUN npm run build
 
 FROM node:10-alpine
 
-COPY --from=builder  /code/public /usr/share/nginx/html
+COPY --from=builder  /code/public /home/wwwroot/project/test
