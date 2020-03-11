@@ -25,9 +25,7 @@ ADD package.json /code
 
 #RUN npm install --production
 
-RUN npm install cnpm --registry=https://registry.npm.taobao.org
-
-RUN cnpm install
+RUN npm install
 
 ADD . /code
 
