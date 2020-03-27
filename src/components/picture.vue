@@ -1,5 +1,6 @@
 <template>
     <div class="img-list-wrap">
+        <mt-button type="primary" size="large" @click="toUrl">查看记录</mt-button>
         <ul class="img-list">
             <li class="img-item" v-for="(file, index) in pictures" :key="index">
                 <img class="img" :src="file.url"/>
@@ -12,6 +13,9 @@
     import { Toast } from 'mint-ui';
     export default {
         name: "picture",
+        components: {
+
+        },
         data() {
             return {
                 pictures: [],
@@ -54,6 +58,9 @@
             })
         },
         methods: {
+            toUrl() {
+                this.$router.push('/thyroid');
+            },
             deleteFile(id) {
                 this.axios.post(`${this.$host}/picture/delete/${id}`)
                     .then(res => {

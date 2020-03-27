@@ -2,15 +2,15 @@
     <div>
         <mt-tabbar v-model="selected">
             <mt-tab-item id="home">
-                <img slot="icon" src="../../assets/home.png">
+                <img slot="icon" src="../../assets/home.png" />
                 首页
             </mt-tab-item>
             <mt-tab-item id="record">
-                <img slot="icon" src="../../assets/gift.png">
+                <img slot="icon" src="../../assets/gift.png" />
                 记录
             </mt-tab-item>
             <mt-tab-item id="my">
-                <img slot="icon" src="../../assets/account.png">
+                <img slot="icon" src="../../assets/account.png" />
                 我的
             </mt-tab-item>
         </mt-tabbar>

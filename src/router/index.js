@@ -27,8 +27,14 @@ let router = new Router({
       name: 'Login',
       component: Login
     },
+    {
+      path: '/thyroid',
+      name: 'Thyroid',
+      component: () => import('../components/thyroid/thyroid.vue'),
+      meta: {requiresAuth: true}
+    }
   ]
-})
+});
 
 router.beforeEach((to, from, next) => {
   if (to.matched.some(record => record.meta.requiresAuth)) {
