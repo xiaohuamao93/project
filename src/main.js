@@ -9,6 +9,7 @@ import 'mint-ui/lib/style.css'
 import host from '../utils/address';
 import 'vue-easytable/libs/themes-base/index.css'
 import {VTable,VPagination} from 'vue-easytable'
+import { DatetimePicker } from 'mint-ui';
 
 Vue.config.productionTip = false
 
@@ -27,6 +28,7 @@ Vue.use(MintUI);
 
 Vue.component(VTable.name, VTable)
 Vue.component(VPagination.name, VPagination)
+Vue.component(DatetimePicker.name, DatetimePicker);
 
 new Vue({
   render: h => h(App),
