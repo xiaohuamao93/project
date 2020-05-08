@@ -15,6 +15,12 @@
       </div>
     </div>
     <mt-button type="primary" size="large" @click.native.enter="handleClick">登录</mt-button>
+    <footer>
+      <p>本网站属于个人网站，仅作为个人生活使用</p>
+      <a href="http://www.beian.miit.gov.cn" target="_blank">
+        <i class="icon icon--small icon-shield mr5"></i> 赣ICP备20005692号
+      </a>
+    </footer>
   </div>
 </template>
 
@@ -148,4 +154,14 @@ li {
 a {
   color: #42b983;
 }
+  footer{
+    background-color: #333;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+  }
 </style>
