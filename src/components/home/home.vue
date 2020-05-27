@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="home-page">
         <mt-tabbar v-model="selected">
             <mt-tab-item id="home">
                 <img slot="icon" src="../../assets/home.png" />
