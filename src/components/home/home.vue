@@ -42,7 +42,7 @@
             return {
                 selected: 'home'
             }
-        },
+        }
     }
 </script>
 
