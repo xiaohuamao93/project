@@ -1,0 +1,14 @@
+version: "3.7"
+
+services:
+  vue-app-test:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: vuenginxtest
+    environment:
+      NODE_ENV: production
+    ports:
+      - "9002:80"
+    container_name: vue-app-test
+    restart: always
