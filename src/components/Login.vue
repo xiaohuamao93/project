@@ -15,7 +15,6 @@
       </div>
     </div>
     <mt-button type="primary" size="large" @click.native.enter="handleClick">登录</mt-button>
-    <input class="not-show" ref="upload" multiple  type="file" @change="attachFile" name="file" accept="image/*" capture="camera" />
     <footer>
 <!--      <p>本网站属于个人网站，仅作为个人生活使用</p>-->
       <a href="http://www.beian.miit.gov.cn" target="_blank">
@@ -64,6 +63,7 @@ export default {
       if (code === 13) this.handleClick();
     },
     handleClick() {
+      return this.$router.push('/home');
       let {username, password} = this;
       let user = {
         username,
