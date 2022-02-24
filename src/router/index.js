@@ -10,6 +10,7 @@ import Home from '../components/home/home.vue';
 Vue.use(Router)
 
 let router = new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
