@@ -33,5 +33,6 @@ ADD package.json /code
 ADD . /code
 
 ENV NODE_ENV=production
+ENV BUILD_ENV=prod
 
 CMD ["npm","run","serve"]
