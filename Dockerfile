@@ -32,4 +32,6 @@ RUN npm install
 
 ADD . /code
 
+ENV NODE_ENV=production
+
 CMD ["npm","run","serve"]
