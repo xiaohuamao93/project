@@ -28,7 +28,7 @@ WORKDIR /code
 
 ADD package.json /code
 
-RUN npm install
+# RUN npm install
 
 ADD . /code
 
